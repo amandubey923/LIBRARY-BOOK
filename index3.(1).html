@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="aboutus.html">
+</head>
+
+<body>
+    <header>
+        <div class="background-video">
+            <video autoplay muted loop>
+                <source src="bgvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <nav>
+            <div class="container">
+                <h1>Book Library</h1>
+                <button class="toggle-btn">Menu</button>
+                <ul class="nav-links">
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">Home</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">BOOKS</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='aboutus.html'">About us</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="books" class="book-gallery">
+            <div class="container">
+                <!-- Example book item -->
+                <div class="book-item">
+                    <img src="thecatcherintheeye.jpeg" alt="Book Title" class="book-cover" data-pdf="thecatcherye.pdf">
+                    <div class="book-details">
+                        <h3>The Catcher in the Rye</h3>
+                        <p><u><b>Author:</b></u>THE CATCHER IN THE RYE
+                            by J.D. Salinger
+                        </p>
+                        <p><u><b>Description:</b></u> The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the “phoniness” of the adult world</p>
+                        <a href="thecatcherye.pdf" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- Add more book items here -->
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

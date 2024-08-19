@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="aboutus.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="background-video">
+            <video autoplay muted loop>
+                <source src="bgvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <nav>
+            <div class="container">
+                <h1>Book Library</h1>
+                <button class="toggle-btn">Menu</button>
+                <ul class="nav-links">
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">Home</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">BOOKS</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='aboutus.html'">About us</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="books" class="book-gallery">
+            <div class="container">
+                <!-- Example book item -->
+                <div class="book-item">
+                    <img src="gaban.jpeg" alt="Book Title" class="book-cover" data-pdf="gaban.pdf">
+                    <div class="book-details">
+                        <h3>Godaan
+                        </h3>
+                        <p><u><b>Author:</b></u>
+                            Novel by Munsi Premchand
+
+
+                        </p>
+                        <p><u><b>Description:</b></u>Gaban tells the story of Ramanath, a handsome, pleasure seeking, boastful, but a morally weak person, who tries to make his wife Jalpa happy by gifting her jewelry which he can't really afford to buy with his meager salary, gets engulfed in a web of debts, which ultimately forces him to commit embezzlement.</p>
+                        <a href="gaban.pdf" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- Add more book items here -->
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

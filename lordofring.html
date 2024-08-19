@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="aboutus.html">
+
+</head>
+
+<body>
+    <header>
+        <div class="background-video">
+            <video autoplay muted loop>
+                <source src="bgvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <nav>
+            <div class="container">
+                <h1>Book Library</h1>
+                <button class="toggle-btn">Menu</button>
+                <ul class="nav-links">
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">Home</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">BOOKS</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='aboutus.html'">About us</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="books" class="book-gallery">
+            <div class="container">
+                <!-- Example book item -->
+                <div class="book-item">
+                    <img src="thelordsofrings.jpeg" alt="Book Title" class="book-cover" data-pdf="lordofring.pdf">
+                    <div class="book-details">
+                        <h3>The Lord of the Ring</h3>
+                        <p><b><u>Author:</u> </b> BY
+J.R.R. Tolkien</p>
+                        <p><u><b>Description:</b></u> The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.</p>
+                        <a href="lordofring.pdf" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- Add more book items here -->
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

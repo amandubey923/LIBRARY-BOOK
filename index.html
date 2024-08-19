@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Books</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="index3.html">
+    <link rel="stylesheet" href="index3.(1).html">
+    <link rel="stylesheet" href="1984book.html">
+    <link rel="stylesheet" href="aboutus.html">
+    <link rel="stylesheet" href="index2.html">
+    <link rel="stylesheet" href="thegreatgatsby.html">
+    <link rel="stylesheet" href="crimepunishment.html">
+    <link rel="stylesheet" href="onehundred.html">
+    <link rel="stylesheet" href="warandpeace.html">
+    <link rel="stylesheet" href="pride.html">
+    <link rel="stylesheet" href="lordofring.html">
+    <link rel="stylesheet" href="mockingbird.html">
+    <link rel="stylesheet" href="godan.html">
+    <link rel="stylesheet" href="gaban.html">
+    <link rel="stylesheet" href="raagdarbari.html">
+    <link rel="stylesheet" href="mailaanchal.html">
+    <link rel="stylesheet" href="madhushala.html">
+    <link rel="stylesheet" href="kaamyani.html">
+    <link rel="stylesheet" href="half.html">
+    <link rel="stylesheet" href="idontlove.html">
+    <link rel="stylesheet" href="itoohad.html">
+    <link rel="stylesheet" href="youarelife.html">
+    <link rel="stylesheet" href="lovestories.html">
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="logo.png" alt="Library" width="300px" style="float: left;">
+
+            <div class="nav-logo border">
+                <div class="logo">
+
+                </div>
+
+            </div>
+            <div class="nav-address border">
+                <p class="add-first">Welcome to Library </p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec">India </p>
+                </div>
+            </div>
+            <div class="nav-search">
+
+                <style>
+                    .search-container {
+                        position: relative;
+                        width: 300px;
+                        margin: 20px auto;
+                    }
+
+                    .search-input {
+                        width: 100%;
+                        padding: 10px;
+                        font-size: 16px;
+                    }
+
+                    .guess-popup {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 1000;
+                        background-color: #f9f9f9;
+                        border: 1px solid #ccc;
+                        width: 100%;
+                        max-height: 200px;
+                        overflow-y: auto;
+                        display: none;
+                    }
+
+                    .guess-popup a {
+                        display: block;
+                        padding: 10px;
+                        text-decoration: none;
+                        color: #333;
+                    }
+
+                    .guess-popup a:hover {
+                        background-color: #ddd;
+                    }
+                </style>
+
+                <div class="search-container">
+                    <input text id="searchInput" class="search-input" placeholder="Search Book...">
+                    <div onclick="location.href='1984book.html'" id="guessPopup" class="guess-popup"></div>
+
+                </div>
+
+                <script>
+                    const searchInput = document.getElementById('searchInput');
+                    const guessPopup = document.getElementById('guessPopup');
+
+                    // Example data for guessing
+                    const guessList = [
+                        'The Catcher in The Rye ',
+
+                        ' The Great Gatsby',
+                        '1984',
+                        'Crime And Punsihment',
+                        'Moby-Dick',
+                        'One hundred of years of Sollenoite',
+                        'War and Peace',
+                        'Pride and Prejudice',
+                        'The Lords of Rings',
+                        'The mocking Bird',
+                    ];
+
+                    searchInput.addEventListener('input', function () {
+                        const searchValue = this.value.toLowerCase();
+                        let matches = guessList.filter(item => item.toLowerCase().startsWith(searchValue));
+
+                        if (searchValue.length === 0) {
+                            guessPopup.style.display = 'none';
+                            guessPopup.innerHTML = '';
+                            return;
+                        }
+
+                        if (matches.length > 0) {
+                            guessPopup.innerHTML = '';
+                            matches.slice(0, 5).forEach(item => {
+                                const link = document.createElement('a');
+                                link.href = '#'; // Replace with actual link if needed
+                                link.textContent = item;
+                                link.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    searchInput.value = item;
+                                    guessPopup.style.display = 'none';
+                                    guessPopup.innerHTML = '';
+                                });
+                                guessPopup.appendChild(link);
+                            });
+                            guessPopup.style.display = 'block';
+                        } else {
+                            guessPopup.style.display = 'none';
+                            guessPopup.innerHTML = '';
+                        }
+                    });
+
+                    document.addEventListener('click', function (e) {
+                        if (!guessPopup.contains(e.target) && e.target !== searchInput) {
+                            guessPopup.style.display = 'none';
+                            guessPopup.innerHTML = '';
+                        }
+                    });
+                </script>
+
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+
+            <div class="nav-signin border">
+                <p onclick="location.href='index2.html'" style="font-size: 20px;"><span><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600">
+                            <B>SIGN IN</B></button></b></span></p>
+
+            </div>
+            <div class="nav-return border">
+                <p onclick="location.href='aboutus.html'"><button
+                        style="width:90px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"><B>ABOUT
+                            US</B></button></p>
+
+            </div>
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p> BOOKS</p>
+                <P>Customer Service</P>
+                <p>Registry</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+            </div>
+            <div class="panel-deals">
+                Trending Books
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="hero-section">
+        <div class="hero-message">
+            <div class="background-video">
+                <video autoplay muted loop>
+                    <source src="bgvideo.mp4" type="video/mp4">
+
+                </video>
+            </div>
+            <p>You are on librarybooks.com. You can read World Famous Books on Library Book . <a>Click here to go to
+                    librarybooks.in</a></p>
+        </div>
+    </div>
+
+    <div class="shop-section">
+        <div class="box">
+            <div class="box-content">
+                <h2>The Catcher in The Rye</h2>
+                <div class="box-image" onclick="location.href='index3.(1).html'"
+                    style="background-image: url('thecatcherintheeye.jpeg'); "></div>
+                <p onclick="location.href='index3.(1).html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>The Great Gatsby</h2>
+                <div class="box-image" onclick="location.href='thegreatgatsby.html'"
+                    style="background-image: url('thegreatgatsby.jpeg');"></div>
+                <p onclick="location.href='thegreatgatsby.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>1984</h2>
+                <div class="box-image" onclick="location.href='1984book.html'"
+                    style="background-image: url('1984.jpeg');"></div>
+                <p onclick="location.href='1984book.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Crime Punishment</h2>
+                <div class="box-image" onclick="location.href='crimepunishment.html'"
+                    style="background-image: url('crimepunishment.jpeg');"></div>
+                <p onclick="location.href='crimepunishment.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Moby-Dick</h2>
+                <div class="box-image" onclick="location.href='mobydick.html'"
+                    style="background-image: url('mobydick.jpeg');"></div>
+                <p onclick="location.href='mobydick.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>One Hundred Years..</h2>
+                <div class="box-image" onclick="location.href='onehundred.html'"
+                    style="background-image: url('onehundredyearsofsolitude.jpeg');"></div>
+                <p onclick="location.href='onehundred.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>War and Piece</h2>
+                <div class="box-image" onclick="location.href='warandpeace.html'"
+                    style="background-image: url('war\ and\ peace.jpeg');"></div>
+                <p onclick="location.href='warandpeace.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Pride and Prejudice</h2>
+                <div class="box-image" onclick="location.href='pride.html'"
+                    style="background-image: url('prideandprejudice.jpeg');"></div>
+                <p onclick="location.href='pride.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>The Lords of Rings</h2>
+                <div class="box-image" onclick="location.href='lordofring.html'"
+                    style="background-image: url('thelordsofrings.jpeg');"></div>
+                <p onclick="location.href='lordofring.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>The Mocking Bird</h2>
+                <div class="box-image" onclick="location.href='mockingbird.html'"
+                    style="background-image: url('themockingbird.jpeg');"></div>
+                <p onclick="location.href='mockingbird.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Godaan</h2>
+                <div class="box-image" onclick="location.href='godan.html'"
+                    style="background-image: url('godaan.jpeg');"></div>
+                <p onclick="location.href='godan.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Gaban</h2>
+                <div class="box-image" onclick="location.href='gaban.html'"
+                    style="background-image: url('gaban.jpeg');"></div>
+                <p onclick="location.href='gaban.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Kamayani</h2>
+                <div class="box-image" onclick="location.href='kaamyani.html'"
+                    style="background-image: url('kamayani.jpeg');"></div>
+                <p onclick="location.href='kaamyani.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Maila Anchal</h2>
+                <div class="box-image" onclick="location.href='mailaanchal.html'"
+                    style="background-image: url('mailaanchal.jpeg');"></div>
+                <p onclick="location.href='mailaanchal.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Raag Darbari</h2>
+                <div class="box-image" onclick="location.href='raagdarbari.html'"
+                    style="background-image: url('raagdarbari.jpeg');"></div>
+                <p onclick="location.href='raagdarbari.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>I don't love..</h2>
+                <div class="box-image" onclick="location.href='idontlove.html'"
+                    style="background-image: url('idontlove.jpeg');"></div>
+                <p onclick="location.href='idontlove.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Half Girlfriend</h2>
+                <div class="box-image" onclick="location.href='half.html'"
+                    style="background-image: url('halfgirlfriend.jpg');"></div>
+                <p onclick="location.href='half.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>I Too had..</h2>
+                <div class="box-image" onclick="location.href='itoohad.html'"
+                    style="background-image: url('itoohadlovestory.jpg');"></div>
+                <p onclick="location.href='itoohad.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>You are the Pass..</h2>
+                <div class="box-image" onclick="location.href='youarelife.html'"
+                    style="background-image: url('youarelife.jpeg');"></div>
+                <p onclick="location.href='youarelife.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Love Stories that..</h2>
+                <div class="box-image" onclick="location.href='lovestories.html'"
+                    style="background-image: url('lovestories.jpeg');"></div>
+                <p onclick="location.href='lovestories.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Love Stories that..</h2>
+                <div class="box-image" onclick="location.href='lovestories.html'"
+                    style="background-image: url('lovestories.jpeg');"></div>
+                <p onclick="location.href='lovestories.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Love Stories that..</h2>
+                <div class="box-image" onclick="location.href='lovestories.html'"
+                    style="background-image: url('lovestories.jpeg');"></div>
+                <p onclick="location.href='lovestories.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Love Stories that..</h2>
+                <div class="box-image" onclick="location.href='lovestories.html'"
+                    style="background-image: url('lovestories.jpeg');"></div>
+                <p onclick="location.href='lovestories.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Love Stories that..</h2>
+                <div class="box-image" onclick="location.href='lovestories.html'"
+                    style="background-image: url('lovestories.jpeg');"></div>
+                <p onclick="location.href='lovestories.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Love Stories that..</h2>
+                <div class="box-image" onclick="location.href='lovestories.html'"
+                    style="background-image: url('lovestories.jpeg');"></div>
+                <p onclick="location.href='lovestories.html'"><button
+                        style="width:270px; height: 50px;border-radius: 30px; color: #000000; background-color: #00988b">
+                        <b><u>READ NOW!!</u></b></button></p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="foot-panel">
+            Back to Top
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Library</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Library Services</a>
+                <a href="#">Library Books</a>
+            </ul>
+            <ul>
+                <p>Our Services</p>
+                <a href="#">Delivery Options</a>
+                <a href="#">Customer Service</a>
+                <a href="#">Membership</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">FAQs</a>
+            </ul>
+            <ul>
+                <p>Resources</p>
+                <a href="#">E-Books</a>
+                <a href="#">Audio Books</a>
+                <a href="#">Research Help</a>
+                <a href="#">Catalog</a>
+                <a href="#">Library Locations</a>
+            </ul>
+            <ul>
+                <p>Follow Us</p>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </ul>
+
+        </div>
+
+
+        <div class="foot-panel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                @ 2023- , Librarybooks.com, Inc. or its affiliates
+                <p>&copy; 2024 Library Books. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

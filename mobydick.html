@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="aboutus.html">
+     <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="background-video">
+            <video autoplay muted loop>
+                <source src="bgvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <nav>
+            <div class="container">
+                <h1>Book Library</h1>
+                <button class="toggle-btn">Menu</button>
+                <ul class="nav-links">
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">Home</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='index.html'">BOOKS</button></li>
+                    <li><button
+                            style="width:80px; height: 30px;border-radius: 10px; color: #000000; background-color: #d0a600"
+                            onclick="location.href='aboutus.html'">About us</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="books" class="book-gallery">
+            <div class="container">
+                <!-- Example book item -->
+                <div class="book-item">
+                    <img src="mobydick.jpeg" alt="Book Title" class="book-cover" data-pdf="mobydick.pdf">
+                    <div class="book-details">
+                        <h3>Moby-Dick
+</h3>
+                        <p><u><b>Author:</b></u>Moby-Dick
+Novel by Herman Melville
+
+
+                        </p>
+                        <p><u><b>Description:</b></u> Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. The book is the sailor Ishmael's narrative of the maniacal quest of Ahab, captain of the whaling ship Pequod, for vengeance against Moby Dick, the giant white sperm whale that bit off his leg on the ship's previous voyage.</p>
+                        <a href="mobydick.pdf" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- Add more book items here -->
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
