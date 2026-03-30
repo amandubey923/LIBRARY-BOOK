@@ -1,0 +1,113 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+  }
+
+/* BODY */
+body {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+/* VIDEO BACKGROUND */
+.background-video video {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+opacity: 0.4;
+}
+
+/* LOGIN BOX */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* TITLE */
+.wrapper h2 {
+margin-bottom: 20px;
+}
+
+/* INPUT FIELD */
+.input-field {
+position: relative;
+margin: 15px 0;
+border-bottom: 2px solid #ccc;
+}
+
+.input-field input {
+width: 100%;
+height: 40px;
+background: transparent;
+border: none;
+outline: none;
+color: #fff;
+}
+
+.input-field label {
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+font-size: 14px;
+transition: 0.3s;
+}
+
+/* FLOAT LABEL */
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+top: -5px;
+font-size: 12px;
+}
+
+/* FORGET */
+.forget {
+display: flex;
+justify-content: space-between;
+font-size: 14px;
+margin: 20px 0;
+}
+
+.forget a {
+color: #fff;
+text-decoration: none;
+}
+
+/* BUTTON */
+button {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 20px;
+background: #00ffc3;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+background: #00cfa0;
+}
+
+/* REGISTER */
+.register {
+margin-top: 20px;
+}
+
+.register a {
+color: #00ffc3;
+text-decoration: none;
+}

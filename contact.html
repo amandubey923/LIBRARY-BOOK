@@ -3,140 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us | Library</title>
+    <link rel="icon" href="favicon.png">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #00785c;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary: #00785c;
+            --accent: #00c9b7;
         }
 
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            width: 80%;
-            max-width: 800px;
-            margin-top: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            color: #1e2937;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(0, 184, 148, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 201, 183, 0.15) 0%, transparent 50%);
+            z-index: -1;
+            animation: gentleMove 30s ease infinite;
+        }
+
+        @keyframes gentleMove {
+            0%   { transform: translate(0, 0); }
+            50%  { transform: translate(40px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* ==================== NEW NAVBAR CSS ==================== */
+        .navbar {
+            height: 75px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #00785c, #00c9b7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 150px;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-address {
+            font-size: 14px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-address i {
+            color: #ffeb3b;
+        }
+
+        
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-actions button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-actions button:hover {
+            background: #fff;
+            color: #00785c;
+            transform: translateY(-2px);
+        }
+
+        /* ==================== MAIN CONTENT ==================== */
+        main {
+            padding: 100px 5% 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-container {
+            max-width: 920px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 4.5rem 3.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 184, 148, 0.25);
+            border: 1px solid #99f6e4;
+            animation: fadeInUp 0.9s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
+            font-size: 3rem;
             text-align: center;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(90deg, #00785c, #00c9b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #475569;
+            max-width: 620px;
+            margin: 0 auto 3.5rem;
+            line-height: 1.7;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .team-member {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            background: white;
+            border-radius: 18px;
+            padding: 2.2rem 2rem;
+            transition: all 0.4s ease;
+            border: 1px solid #99f6e4;
+            box-shadow: 0 10px 20px rgba(0, 184, 148, 0.08);
         }
 
-        .team-member .photo {
-            flex-shrink: 0;
-            width: 120px;
-            height: 120px;
-        }
-
-        .team-member .photo img {
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-        }
-
-        .team-member .info {
-            flex-grow: 1;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: #72fff1;
-            border-radius: 5px;
-            height: 120px;
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0, 184, 148, 0.18);
+            border-color: #5eead4;
         }
 
         .team-member h2 {
-            margin: 0;
-            font-size: 1.2em;
+            font-size: 1.45rem;
+            color: #1e2937;
+            margin-bottom: 0.6rem;
         }
 
         .team-member p {
-            margin: 5px 0;
+            color: #64748b;
+            margin-bottom: 1.4rem;
+            font-size: 1.05rem;
         }
 
-        .social-media a {
-            margin-right: 10px;
+        .email {
+            color: #00785c;
             text-decoration: none;
-            color: #007bff;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
         }
 
-        .social-media a:hover {
-            color: #0056b3;
+        .email:hover {
+            color: #004d3b;
+            transform: translateX(6px);
+        }
+
+        .social a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.98rem;
+            transition: color 0.3s ease;
+        }
+
+        .social a:hover {
+            color: #00785c;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3.5rem;
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .contact-container { padding: 3rem 1.8rem; }
+            .nav-search { display: none; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Us</h1>
 
-        <div class="team-member">
-            <div class="photo">
-                <img src="amandubey.jpeg" alt="John Smith">
-            </div>
-            <div class="info">
-                <h2>Aman Kumar - Lead Developer</h2>
-                <p>Email: <a href="amandubey0923@gmail.com">amandubey0923@gmail.com</a></p>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/aman_dubey_923?igsh=MThibGtxZHQycHBqbg==" target="_blank">Instagram</a>
-                    <a href="https://twitter.com/john-smith" target="_blank">Twitter</a>
-                </div>
+    <!-- Animated Background -->
+    <div class="background"></div>
+
+    <!-- NEW NAVBAR -->
+    <nav class="navbar">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="./assets/images/logo.png" alt="Reader's HUB Logo" class="logo">
+            <div>
+                
             </div>
         </div>
 
-        <div class="team-member">
-            <div class="photo">
-                <img src="abhay33.jpeg" alt="Emily Johnson">
-            </div>
-            <div class="info">
-                <h2>Abhay Kumar Yadav - Front-End Developer</h2>
-                <p>Email: <a href="abhayyadav96312@gmail.com">abhayyadav96312@gmail.com</a></p>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/abhay_yadav969?igsh=MWsxcjNubHVtOWFvbw==" target="_blank">Instagram</a>
-                    <a href="https://twitter.com/emily-johnson" target="_blank">Twitter</a>
-                </div>
-            </div>
-        </div>
+        <!-- Search Bar -->
+     
 
-        <div class="team-member">
-            <div class="photo">
-                <img src="akshat.jpeg" alt="Michael Brown">
-            </div>
-            <div class="info">
-                <h2>Akshat Shukla - JavaScript Developer</h2>
-                <p>Email: <a href="ashukla20062006@gmai.com">ashukla20062006@gmai.com</a></p>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/akshatonly18?igsh=M2Y2NGw1a2wwZm1y" target="_blank">Instagram</a>
-                    <a href="https://twitter.com/michael-brown" target="_blank">Twitter</a>
-                </div>
+       <div class="nav-address">
+            <h3>Welcome to Reader's HUB</h3>
+            <div>
+                
             </div>
         </div>
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='about.html'">About</button>
+        </div>
+    </nav>
 
-        <div class="team-member">
-            <div class="photo">
-                <img src="aditya.jpeg" alt="Sarah Williams">
-            </div>
-            <div class="info">
-                <h2>Aditya Kumar - Web Designing and Styling</h2>
-                <p>Email: <a href="aditya70910sh@gmail.com">aditya70910sh@gmail.com</a></p>
-                <div class="social-media">
-                    <a href="https://www.instagram.com/adityaraj8297?igsh=MXUwNzA2M3NzcjdzdQ==" target="_blank">Instagram</a>
-                    <a href="https://twitter.com/sarah-williams" target="_blank">Twitter</a>
+    <!-- Main Content -->
+    <main>
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p class="subtitle">
+                We are a passionate team building <strong>Reader's HUB</strong> — your gateway to the world of books. 
+                Discover, read, and share timeless classics and modern masterpieces. 
+                Got feedback, suggestions, or just want to connect? Reach out to us!
+            </p>
+
+            <div class="team-grid">
+                
+                <!-- Member 1 -->
+                <div class="team-member">
+                    <h2>Aman Kumar</h2>
+                    <p><strong>Lead Developer</strong></p>
+                    <a href="mailto:amandubey0923@gmail.com" class="email">
+                        ✉️ amandubey0923@gmail.com
+                    </a>
+                    <div class="social" style="margin-top: 1.2rem;">
+                        <a href="https://www.instagram.com/aman_dubey_923" target="_blank">Instagram</a>
+                    </div>
                 </div>
+
+                <!-- Member 2 -->
+                <div class="team-member">
+                    <h2>Abhay Kumar Yadav</h2>
+                    <p><strong>Front-End Developer</strong></p>
+                    <a href="mailto:abhayyadav96312@gmail.com" class="email">
+                        ✉️ abhayyadav96312@gmail.com
+                    </a>
+                    <div class="social" style="margin-top: 1.2rem;">
+                        <a href="https://www.instagram.com/abhay_yadav969" target="_blank">Instagram</a>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-member">
+                    <h2>Akshat Shukla</h2>
+                    <p><strong>JavaScript Developer</strong></p>
+                    <a href="mailto:ashukla20062006@gmail.com" class="email">
+                        ✉️ ashukla20062006@gmail.com
+                    </a>
+                    <div class="social" style="margin-top: 1.2rem;">
+                        <a href="https://www.instagram.com/akshatonly18" target="_blank">Instagram</a>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-member">
+                    <h2>Aditya Kumar</h2>
+                    <p><strong>UI/UX Designer</strong></p>
+                    <a href="mailto:aditya70910sh@gmail.com" class="email">
+                        ✉️ aditya70910sh@gmail.com
+                    </a>
+                    <div class="social" style="margin-top: 1.2rem;">
+                        <a href="https://www.instagram.com/adityaraj8297" target="_blank">Instagram</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-note">
+                We usually reply within 24 hours. Thank you for being part of our reading community ❤️
             </div>
         </div>
-    </div>
+    </main>
+
 </body>
 </html>

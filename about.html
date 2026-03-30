@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Library</title>
+    <link rel="icon" href="favicon.png">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary: #00785c;
+            --accent: #00c9b7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            color: #1e2937;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(0, 184, 148, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 201, 183, 0.15) 0%, transparent 50%);
+            z-index: -1;
+            animation: gentleMove 30s ease infinite;
+        }
+
+        @keyframes gentleMove {
+            0%   { transform: translate(0, 0); }
+            50%  { transform: translate(40px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* ==================== NEW NAVBAR CSS ==================== */
+        .navbar {
+            height: 75px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #00785c, #00c9b7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 150px;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-address {
+            font-size: 14px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-address i {
+            color: #ffeb3b;
+        }
+
+        .nav-search {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            padding: 5px 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        
+        .search-input::placeholder {
+            color: #ddd;
+        }
+
+        
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-actions button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-actions button:hover {
+            background: #fff;
+            color: #00785c;
+            transform: translateY(-2px);
+        }
+
+        /* ==================== MAIN CONTENT ==================== */
+        main {
+            padding: 100px 5% 120px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 5.5rem 4.5rem;
+            box-shadow: 0 25px 60px -12px rgba(0, 184, 148, 0.28);
+            border: 1px solid #99f6e4;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00785c, #00c9b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 1.35rem;
+            color: #475569;
+            max-width: 720px;
+            margin: 0 auto 4rem;
+            line-height: 1.8;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            color: #334155;
+            max-width: 820px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.1rem;
+            margin: 3.5rem 0 1.5rem;
+            color: #0f172a;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #00785c, #00c9b7);
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 10px;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid #99f6e4;
+            box-shadow: 0 10px 25px rgba(0, 184, 148, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 40px rgba(0, 184, 148, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: #00785c;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            background: white;
+            padding: 1.8rem 1.2rem;
+            border-radius: 16px;
+            text-align: center;
+            font-weight: 600;
+            color: #1e2937;
+            border: 1px solid #99f6e4;
+            transition: all 0.3s ease;
+        }
+
+        .value-item:hover {
+            background: linear-gradient(135deg, #00785c, #00c9b7);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            padding: 2.2rem 1.8rem;
+            text-align: center;
+            border: 1px solid #99f6e4;
+            transition: all 0.4s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0, 184, 148, 0.18);
+        }
+
+        .team-member h3 {
+            font-size: 1.35rem;
+            margin: 1rem 0 0.4rem;
+            color: #1e2937;
+        }
+
+        .team-member .role {
+            color: #00785c;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 5rem;
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.6rem; }
+            .about-container { padding: 3.5rem 2rem; }
+            .mission-vision { grid-template-columns: 1fr; }
+            .nav-search { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="background"></div>
+
+    <!-- NEW NAVBAR -->
+    <nav class="navbar">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="./assets/images/logo.png" alt="Reader's HUB Logo" class="logo">
+            <div>
+                
+            </div>
+        </div>
+
+        
+
+        <!-- Address -->
+        <div class="nav-address">
+            <h3>Welcome to Reader's HUB</h3>
+            <div>
+                
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='contact.html'">Contact</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="about-container">
+            <h1>About Us</h1>
+            <p class="tagline">
+                Your modern gateway to the world's greatest stories.
+            </p>
+            
+            <div class="about-text">
+                Welcome to <strong>Reader's HUB</strong> — a beautifully crafted digital sanctuary for book lovers, 
+                students, and lifelong learners. We curate timeless classics and contemporary masterpieces to make 
+                reading accessible, immersive, and inspiring.
+            </div>
+
+            <h2>Our Mission</h2>
+            <div class="mission-vision">
+                <div class="card">
+                    <h3>📚 Accessibility</h3>
+                    <p>Books available anytime, anywhere — on any device. Reading should never have barriers.</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 Diversity</h3>
+                    <p>From ancient wisdom to modern fiction, we celebrate stories from every corner of the world.</p>
+                </div>
+            </div>
+
+            <h2>Our Vision</h2>
+            <div class="about-text" style="max-width: 680px; margin: 0 auto;">
+                To ignite a global reading culture and become the most loved digital library for knowledge seekers worldwide.
+            </div>
+
+            <!-- Team -->
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Aman Kumar</h3>
+                    <p class="role">Lead Developer</p>
+                    <p>Building robust, responsive, and delightful digital experiences.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Abhay Kumar Yadav</h3>
+                    <p class="role">Front-End Developer</p>
+                    <p>Crafting clean, intuitive, and visually stunning interfaces.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Akshat Shukla</h3>
+                    <p class="role">JavaScript Developer</p>
+                    <p>Bringing interactivity and smooth user experiences to life.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Aditya Kumar</h3>
+                    <p class="role">UI/UX Designer</p>
+                    <p>Designing beautiful visuals that make reading feel magical.</p>
+                </div>
+            </div>
+
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">Integrity</div>
+                <div class="value-item">Innovation</div>
+                <div class="value-item">Customer Focus</div>
+                <div class="value-item">Teamwork</div>
+                <div class="value-item">Excellence</div>
+            </div>
+
+            <div class="footer-note">
+                Thank you for being part of our journey to make reading more beautiful and accessible for everyone ❤️
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

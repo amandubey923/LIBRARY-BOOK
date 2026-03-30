@@ -1,0 +1,259 @@
+/* =========================
+BOOK PAGE (COMMON CSS)
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary: #00785c;
+    --accent: #00c9b7;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    color: #1e2937;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Video Background (STATIC FIX) */
+.background-video video {
+    position: absolute; /* 🔥 changed from fixed → static feel */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.45;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    height: 75px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #00785c, #00c9b7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: #fff;
+    position: static; /* 🔥 removed sticky */
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    height: 150px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ADDRESS */
+.nav-address {
+    font-size: 14px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-address i {
+    color: #ffeb3b;
+}
+
+/* NAV BUTTONS */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-actions button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-actions button:hover {
+    background: #fff;
+    color: #00785c;
+    transform: translateY(-2px);
+}
+
+/* 🔥 BOOK HEADER (HEIGHT REDUCED) */
+.book-header {
+    background: linear-gradient(135deg, #00785c, #00c9b7);
+    color: #fff;
+    padding: 10px 25px; /* 🔥 reduced from 20px 40px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.book-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; /* 🔥 reduced from 2.8rem */
+    margin: 0;
+}
+
+.book-header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.book-header a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* MAIN CONTAINER */
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 60px 40px;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* BOOK COVER */
+.book-cover {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-cover:hover {
+    transform: scale(1.08) translateY(-15px);
+    box-shadow: 
+        0 25px 50px rgba(0,0,0,0.5),
+        0 0 30px rgba(0, 201, 183, 0.7);
+    filter: brightness(1.08) contrast(1.05);
+}
+
+/* SHINE */
+.book-cover::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    pointer-events: none;
+}
+
+.book-cover:hover::after {
+    left: 150%;
+}
+
+/* BOOK INFO */
+.book-info {
+    max-width: 520px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    color: #1e2937;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border: 1px solid #99f6e4;
+}
+
+.book-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #00785c;
+}
+
+.book-info p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.book-info b {
+    color: #00785c;
+}
+
+/* BUTTON */
+.download-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #00785c, #00c9b7);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 120, 92, 0.3);
+}
+
+.download-btn:hover {
+    background: #fff;
+    color: #00785c;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 201, 183, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .book-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .book-cover {
+        width: 85%;
+        max-width: 280px;
+    }
+
+    .book-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-search {
+        display: none;
+    }
+}
