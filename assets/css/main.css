@@ -60,6 +60,8 @@ NAVBAR (SAME DESIGN)
 .logo {
   height: 180px;
   transition: 0.3s ease;
+  position: relative;
+  top: 8px; 
 }
 
 .logo:hover {
@@ -225,45 +227,10 @@ font-weight: bold;
 /* =========================
 PANEL
 ========================= */
-.panel {
-  position: relative;
-  z-index: 10;                 /* video ke upar laane ke liye */
 
-  background-color: #232f3e;   /* solid color */
-  color: #fff;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  padding: 10px 20px;
-}
 
-/* LEFT */
-.panel-left {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-}
-
-/* CENTER */
-.panel-center {
-  display: flex;
-  gap: 20px;
-  flex: 1;
-  margin-left: 20px;
-}
-
-.panel-center p {
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* RIGHT */
-.panel-right {
-  font-weight: 600;
-}
 /* =========================
 HERO (VIDEO SECTION FIX)
 ========================= */
