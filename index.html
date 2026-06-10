@@ -1,290 +1,297 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reader's HUB</title>
 
 
-<!-- CSS -->
-<link rel="stylesheet" href="assets/css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="icon" href="favicon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="favicon.png">
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+    <!-- HEADER -->
 
-<header>
-    <nav class="navbar">
-        <img src="assets/images/logo.png" alt="Library Logo" class="logo">
+    <header>
+        <nav class="navbar">
+            <img src="assets/images/logo.png" alt="Library Logo" class="logo">
 
 
-    <div class="nav-address">
-        <p>Welcome to Reader's HUB</p>
-        <div>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>India</span>
-        </div>
-    </div>
+            <div class="nav-address">
+                <p>Welcome to Reader's HUB</p>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>India</span>
+                </div>
+            </div>
 
-    <!-- SEARCH -->
-    <div class="nav-search">
-        <input type="text" id="searchInput" placeholder="Search Book..." class="search-input">
-        <div id="guessPopup" class="guess-popup"></div>
-        <div class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-    </div>
+            <!-- SEARCH -->
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Search Book..." class="search-input">
+                <div id="guessPopup" class="guess-popup"></div>
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
 
-    <!-- NAV BUTTONS -->
-    <div class="nav-actions">
-        <button onclick="location.href='login.html'">Sign In</button>
-        <button onclick="location.href='about.html'">About</button>
-        <button onclick="location.href='contact.html'">Contact</button>
-    </div>
-</nav>
+            <!-- NAV BUTTONS -->
+            <div class="nav-actions">
+                <button onclick="location.href='login.html'">Sign In</button>
+                <button onclick="location.href='about.html'">About</button>
+                <button onclick="location.href='contact.html'">Contact</button>
+            </div>
+        </nav>
 
-<!-- PANEL -->
-<div class="panel-right" style="
+        <!-- PANEL -->
+        <div class="panel-right" style="
   background-color: rgba(0, 0, 0, 0.95);
   position: relative;
   z-index: 10;
   padding: 8px;
 ">
- 
-  <marquee style="
+
+            <marquee style="
     color: #ffffff;
     font-weight: bold;
     font-size: 16px;
   ">
-    📚 Welcome to Reader's HUB — Explore your favorite books!
-  </marquee>
-  
-</div>
+                📚 Welcome to Reader's HUB — Explore your favorite books!
+            </marquee>
 
-</header>
+        </div>
 
-<!-- HERO -->
+    </header>
 
-<section class="hero-section">
-    <video autoplay muted loop class="bg-video">
-        <source src="assets/images/bg/bgvideo.mp4" type="video/mp4">
-    </video>
+    <!-- HERO -->
 
-
-<div class="hero-message">
-    <p>Read World Famous Books 📚
-        
-    </p>
-</div>
+    <section class="hero-section">
+        <video autoplay muted loop class="bg-video">
+            <source src="assets/images/bg/bgvideo.mp4" type="video/mp4">
+        </video>
 
 
-</section>
+        <div class="hero-message">
+            <p>Read World Famous Books 📚
 
-<!-- BOOK SECTION -->
+            </p>
+        </div>
 
-<main class="shop-section">
 
+    </section>
 
-<!-- BOOK 1 -->
-<div class="box" onclick="location.href='pages/1984.html'">
-    <h2>1984</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/1984.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+    <!-- BOOK SECTION -->
 
-<!-- BOOK 2 -->
-<div class="box" onclick="location.href='pages/thegreatgatsby.html'">
-    <h2>The Great Gatsby</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/thegreatgatsby.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+    <main class="shop-section">
+        <!-- BOOK 23 -->
+        <div class="box" onclick="location.href='pages/advaitindailylife.html'">
+            <h2>Advait in Daily Life</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/advaitindailylife.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 1 -->
+        <div class="box" onclick="location.href='pages/1984.html'">
+            <h2>1984</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/1984.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 3 -->
-<div class="box" onclick="location.href='pages/crimepunishment.html'">
-    <h2>Crime Punishment</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/crimepunishment.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 2 -->
+        <div class="box" onclick="location.href='pages/thegreatgatsby.html'">
+            <h2>The Great Gatsby</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/thegreatgatsby.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 4 -->
-<div class="box" onclick="location.href='pages/mobydick.html'">
-    <h2>Moby Dick</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/mobydick.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 3 -->
+        <div class="box" onclick="location.href='pages/crimepunishment.html'">
+            <h2>Crime Punishment</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/crimepunishment.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 5 -->
-<div class="box" onclick="location.href='pages/onehundred.html'">
-    <h2>One Hundred Years</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/onehundredyearsofsolitude.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 4 -->
+        <div class="box" onclick="location.href='pages/mobydick.html'">
+            <h2>Moby Dick</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/mobydick.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 6 -->
-<div class="box" onclick="location.href='pages/warandpeace.html'">
-    <h2>War and Peace</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/war and peace.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 5 -->
+        <div class="box" onclick="location.href='pages/onehundred.html'">
+            <h2>One Hundred Years</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/onehundredyearsofsolitude.jpeg');">
+            </div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 7 -->
-<div class="box" onclick="location.href='pages/prideandprejudice.html'">
-    <h2>Pride and Prejudice</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/prideandprejudice.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 6 -->
+        <div class="box" onclick="location.href='pages/warandpeace.html'">
+            <h2>War and Peace</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/war and peace.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 8 -->
-<div class="box" onclick="location.href='pages/lordofring.html'">
-    <h2>Lord of Rings</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/thelordsofrings.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 7 -->
+        <div class="box" onclick="location.href='pages/prideandprejudice.html'">
+            <h2>Pride and Prejudice</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/prideandprejudice.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 9 -->
-<div class="box" onclick="location.href='pages/mockingbird.html'">
-    <h2>Mocking Bird</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/themockingbird.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 8 -->
+        <div class="box" onclick="location.href='pages/lordofring.html'">
+            <h2>Lord of Rings</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/thelordsofrings.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 10 -->
-<div class="box" onclick="location.href='pages/godan.html'">
-    <h2>Godan</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/godaan.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 11 -->
-<div class="box" onclick="location.href='pages/gaban.html'">
-    <h2>Gaban</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/gaban.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 12 -->
-<div class="box" onclick="location.href='pages/idontlove.html'">
-    <h2>I dont Love anymore</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/idontlove.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 13 -->
-<div class="box" onclick="location.href='pages/itoohadlovestory.html'">
-    <h2>I too had a Love Story</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/itoohadlovestory.jpg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 9 -->
+        <div class="box" onclick="location.href='pages/mockingbird.html'">
+            <h2>Mocking Bird</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/themockingbird.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 14 -->
-<div class="box" onclick="location.href='pages/kamayani.html'">
-    <h2>Kamayani</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/kamayani.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 15 -->
-<div class="box" onclick="location.href='pages/lovestories.html'">
-    <h2>Love Stories</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/lovestories.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 16 -->
-<div class="box" onclick="location.href='pages/madhushala.html'">
-    <h2>Madhushala</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/madhusala.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 17 -->
-<div class="box" onclick="location.href='pages/mailaanchal.html'">
-    <h2>Maila Anchal</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/mailaanchal.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 18 -->
-<div class="box" onclick="location.href='pages/raagdarbari.html'">
-    <h2>Raag Darbari</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/raagdarbari.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 19 -->
-<div class="box" onclick="location.href='pages/thecatcherintheeye.html'">
-    <h2>The Catcher in the Rye</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/thecatcherintheeye.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
-<!-- BOOK 20 -->
+        <!-- BOOK 10 -->
+        <div class="box" onclick="location.href='pages/godan.html'">
+            <h2>Godan</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/godaan.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 11 -->
+        <div class="box" onclick="location.href='pages/gaban.html'">
+            <h2>Gaban</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/gaban.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 12 -->
+        <div class="box" onclick="location.href='pages/idontlove.html'">
+            <h2>I dont Love anymore</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/idontlove.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 13 -->
+        <div class="box" onclick="location.href='pages/itoohadlovestory.html'">
+            <h2>I too had a Love Story</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/itoohadlovestory.jpg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<div class="box" onclick="location.href='pages/warmth.html'">
-    <h2>Warmth</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/warmth.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 14 -->
+        <div class="box" onclick="location.href='pages/kamayani.html'">
+            <h2>Kamayani</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/kamayani.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 15 -->
+        <div class="box" onclick="location.href='pages/lovestories.html'">
+            <h2>Love Stories</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/lovestories.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 16 -->
+        <div class="box" onclick="location.href='pages/madhushala.html'">
+            <h2>Madhushala</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/madhusala.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 17 -->
+        <div class="box" onclick="location.href='pages/mailaanchal.html'">
+            <h2>Maila Anchal</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/mailaanchal.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 18 -->
+        <div class="box" onclick="location.href='pages/raagdarbari.html'">
+            <h2>Raag Darbari</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/raagdarbari.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 19 -->
+        <div class="box" onclick="location.href='pages/thecatcherintheeye.html'">
+            <h2>The Catcher in the Rye</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/thecatcherintheeye.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+        <!-- BOOK 20 -->
 
-<!-- BOOK 21 -->
-<div class="box" onclick="location.href='pages/youarethepassword.html'">
-    <h2>You are the Password..</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/youarelife.jpeg');"></div>
-    <button>READ NOW</button>
-</div>
+        <div class="box" onclick="location.href='pages/warmth.html'">
+            <h2>Warmth</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/warmth.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-<!-- BOOK 22 -->
-<!-- <div class="box" onclick="location.href='pages/gaban.html'">
+        <!-- BOOK 21 -->
+        <div class="box" onclick="location.href='pages/youarethepassword.html'">
+            <h2>You are the Password..</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/youarelife.jpeg');"></div>
+            <button>READ NOW</button>
+        </div>
+
+        <!-- BOOK 22 -->
+        <!-- <div class="box" onclick="location.href='pages/gaban.html'">
     <h2>Gaban</h2>
     <div class="box-image" style="background-image: url('assets/images/books/warmth.jpeg');"></div>
     <button>READ NOW</button>
 </div> -->
-<!-- BOOK 23 -->
-<div class="box" onclick="location.href='pages/halfgirlfriend.html'">
-    <h2>Half Girlfriend</h2>
-    <div class="box-image" style="background-image: url('assets/images/books/halfgirlfriend.jpg');"></div>
-    <button>READ NOW</button>
-</div>
+        <!-- BOOK 23 -->
+        <div class="box" onclick="location.href='pages/halfgirlfriend.html'">
+            <h2>Half Girlfriend</h2>
+            <div class="box-image" style="background-image: url('assets/images/books/halfgirlfriend.jpg');"></div>
+            <button>READ NOW</button>
+        </div>
 
-</main>
+    </main>
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
 
-<footer>
-    <div class="foot-panel"></div>
-
-
-<div class="foot-panel2">
-    <div>
-        <p>Get to Know Us</p>
-        <a href="#">Careers</a>
-        <a href="#">About</a>
-    </div>
-
-    <div>
-        <p>Our Services</p>
-        <a href="#">Delivery</a>
-        <a href="#">Support</a>
-    </div>
-
-    <div>
-        <p>Follow Us</p>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-    </div>
-</div>
-
-<div class="foot-panel4">
-    <p>© 2024 Library Books</p>
-</div>
+    <footer>
+        <div class="foot-panel"></div>
 
 
-</footer>
+        <div class="foot-panel2">
+            <div>
+                <p>Get to Know Us</p>
+                <a href="#">Careers</a>
+                <a href="#">About</a>
+            </div>
 
-<!-- JS -->
+            <div>
+                <p>Our Services</p>
+                <a href="#">Delivery</a>
+                <a href="#">Support</a>
+            </div>
 
-<script src="assets/js/main.js"></script>
+            <div>
+                <p>Follow Us</p>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+        <div class="foot-panel4">
+            <p>© 2024 Library Books</p>
+        </div>
+
+
+    </footer>
+
+    <!-- JS -->
+
+    <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
