@@ -26,6 +26,9 @@ const books = [
     { name: "raag darbari", link: "pages/raagdarbari.html" },                       //17
     { name: "itoohadlovestory", link: "pages/itoohadlovesstory.html" },             //18
     { name: "idontloveyou", link: "pages/idontlove.html" },                         //19
+    { name: "the discipline of transcendence", link: "pages/TheDisciplineofTranscendence.html" }, //20
+    { name: "the complete works of swami vivekananda", link: "pages/TheDisciplineofTranscendence.html" }, //21
+    
 ];
 
 // 🔍 FUNCTION → SEARCH + REDIRECT
